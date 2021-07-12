@@ -8,7 +8,7 @@ export default function Home() {
         <title>WRI News</title>
         <meta name="keywords" content="Some news" />
       </Head>
-      
+      <h1>Welcome</h1>
     </div>
   )
 }
