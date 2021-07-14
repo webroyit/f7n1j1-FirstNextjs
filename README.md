@@ -6,6 +6,7 @@
 - Nextjs allows the first page load to be rendered by the server which is great for SEO and performance
 
 - The convention for files name is to use lowercase for pages and uppercae for any other components
+- A custom Document is used to augment `<html>` and `<body>` tags
 
 ## Next.js Benefits
 - Easy page routing
