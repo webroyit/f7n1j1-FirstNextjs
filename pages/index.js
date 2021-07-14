@@ -1,6 +1,8 @@
 // For custom titles, meta tags, keywords, descriptions, ...
 import Head from 'next/head'
 
+import ArticleList from '../components/ArticleList'
+
 export default function Home({ articles }) {
   console.log(articles)
   return (
@@ -10,10 +12,8 @@ export default function Home({ articles }) {
         <meta name="keywords" content="Some news" />
       </Head>
 
-      {articles.map(article =>(
-        <h3>{article.title}</h3>
-      ))}
-      <h1>Welcome</h1>
+      
+      <ArticleList articles={articles} />
     </div>
   )
 }
