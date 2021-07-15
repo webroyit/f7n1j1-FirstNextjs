@@ -16,8 +16,9 @@ const article = ({ article }) => {
     )
 }
 
-// context contain parameters from route
-export const getServerSideProps = async context => {
+// 'context' contain parameters from route
+// When using getStaticProps that uses parameters from route, you need to call getStaticPaths to generate paths
+export const getStaticProps = async context => {
     const res = await fetch(`
         https://jsonplaceholder.typicode.com/posts/${context.params.id}
     `)
@@ -28,6 +29,23 @@ export const getServerSideProps = async context => {
         props: {
             article
         }
+    }
+}
+
+export const getStaticPaths = async () => {
+    // Get all articles
+    const res = await fetch(`https://jsonplaceholder.typicode.com/posts`)
+    const articles = await res.json()
+
+    // Get all article ID
+    const ids = articles.map(article => article.id)
+
+    // Format the article ids as array of objects
+    const paths = ids.map(id => ({params: {id: id.toString()}}))
+
+    return {
+        paths,      // ex => {params: {id: '1', id: '2'}}
+        fallback: false     // return 404 page if the data does not exist
     }
 }
 

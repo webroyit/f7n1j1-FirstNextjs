@@ -10,7 +10,9 @@
 
 - getStaticProps fetch data at build time
 - getServerSideProps fetch data on every request
-- get static path to dynamically generate paths based on the data that is fetched
+- getStaticPaths to dynamically generate paths based on the data that is fetched
+
+- getStaticProps is faster than getServerSideProps
 
 ## Next.js Benefits
 - Easy page routing
