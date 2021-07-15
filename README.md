@@ -9,7 +9,7 @@
 - A custom Document is used to augment `<html>` and `<body>` tags
 
 - getStaticProps fetch data at build time
-- server side props fetch data on every request
+- getServerSideProps fetch data on every request
 - get static path to dynamically generate paths based on the data that is fetched
 
 ## Next.js Benefits
