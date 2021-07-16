@@ -14,6 +14,9 @@
 
 - getStaticProps is faster than getServerSideProps
 
+## How to export a static website
+Add `next export` to your scripts on package.json and run it
+
 ## Next.js Benefits
 - Easy page routing
 - API Routes
