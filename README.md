@@ -14,6 +14,8 @@
 
 - getStaticProps is faster than getServerSideProps
 
+- `http://localhost:3000/api/articles` to get json data for articles from the API routes
+
 ## How to export a static website
 Add `next export` to your scripts on package.json and run it
 
@@ -28,4 +30,5 @@ Add `next export` to your scripts on package.json and run it
 - -- public => A static folder for anything that is accessible from the browser (ex = images)
 - -- styles => For css styles
 - -- pages => For react component, it has routes
+-  |__ api => For creating API routes
 -  |__ _app.js => It wraps around all the page components
