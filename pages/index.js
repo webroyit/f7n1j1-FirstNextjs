@@ -1,20 +1,10 @@
 import {server} from '../config'
-
-// For custom titles, meta tags, keywords, descriptions, ...
-import Head from 'next/head'
-
 import ArticleList from '../components/ArticleList'
 
 export default function Home({ articles }) {
   console.log(articles)
   return (
     <div>
-      <Head>
-        <title>WRI News</title>
-        <meta name="keywords" content="Some news" />
-      </Head>
-
-      
       <ArticleList articles={articles} />
     </div>
   )
