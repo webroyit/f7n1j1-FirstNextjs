@@ -1,4 +1,5 @@
 # First Nextjs
+First time using Next.js.  The template is from Traversy Media youtube channel.
 
 # Notes
 - Nextjs is a React web framework that enables functionality such as server-side rendering and static site generation
